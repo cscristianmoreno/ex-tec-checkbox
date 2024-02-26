@@ -6,15 +6,15 @@ export type HookModelStruct<T> = [
     Dispatch<SetStateAction<T>>
 ];
 
-export type HookCountryModelStruct = {
+export type HookCountryModelStruct<FMS = FuncModelStruct<string, void> | FuncModelStruct<void>> = {
     country: string[],
     setCountry: Dispatch<SetStateAction<string[]>>,
     checkboxMaster: boolean,
     setCheckboxMaster: Dispatch<SetStateAction<boolean>>,
-    addCountry: FuncModelStruct<string, void>,
-    removeCountry: FuncModelStruct<string, void>,
+    addCountry: FMS,
+    removeCountry: FMS,
     selectAll: boolean,
-    selectAllCountry: FuncModelStruct<void>
+    selectAllCountry: FMS
 };
 
 export type HookCheckboxModelStruct = {
