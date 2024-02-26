@@ -23,7 +23,7 @@ export const useCountry: FuncModelStruct<HookCountryModelStruct> = (): HookCount
     */
     const [checkboxMaster, setCheckboxMaster]: HookModelStruct<boolean> = useState<boolean>(false);
 
-    // En caso de que la dependencia country cambie, se verifica si están checkeados todos los estados.
+    // En caso de que la dependencia country cambie, se verifica si están checkeados todos los checkbox.
     useEffect((): FuncModelStruct => {
         /*
             Se pone el checkbox maestro en falso, 
